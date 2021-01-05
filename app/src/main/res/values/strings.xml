@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Telekom Loggin</string>
+    <string name="backbutton">Circular Button with Icon and Text</string>
+    <string name="login">Login</string>
+    <string name="todo">TODO</string>
+    <string name="check_ich_nicht">check ich nicht</string>
+    <string name="login_link">Login-Link</string>
+    <string name="hier_den_login_link_einf_gen">Hier den Login-link einfügen</string>
+    <string name="hier_login_link_einf_gen">Hier Login-Link einfügen</string>
+    <string name="settings">Settings</string>
+</resources>

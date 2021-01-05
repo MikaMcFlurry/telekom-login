@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/check"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".Settings">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="74dp"
+        android:background="#E20074"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/SettingsName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="100dp"
+        android:text="@string/settings"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        android:textStyle="normal|bold"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar"
+        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintStart_toEndOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/BackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="#4F000000"
+        android:backgroundTint="#E20074"
+        android:clickable="true"
+        android:foregroundTint="#75000000"
+        android:tint="#000000"
+        app:backgroundTint="#54000000"
+        app:layout_constraintEnd_toStartOf="@+id/SettingsName"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar"
+        app:maxImageSize="28dp"
+        app:rippleColor="#000000"
+        app:srcCompat="@android:drawable/ic_menu_revert" />
+
+    <TextView
+        android:id="@+id/ÜberschriftNeuesNetzwerk"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="122dp"
+        android:text="Neues Netzwerk anlegen"
+        android:textAllCaps="false"
+        android:textColor="#C1000000"
+        android:textSize="25sp"
+        android:textStyle="normal|bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GespecihertesNetzwerkAuswählen" />
+
+    <EditText
+        android:id="@+id/Login-LinkEinfügen"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Hier Login-Link einfügen"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/LinkSpeicherButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Login_LinkNameInfo" />
+
+    <TextView
+        android:id="@+id/Login-LinkInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:text="Fügen sie hier den Login-Link des Telekom-Hotspots ein, den du nutzen möchtest.                     Betätige danach den Speicher-Button um den Link zu speichern. "
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Login-LinkEinfügen" />
+
+    <Button
+        android:id="@+id/LinkSpeicherButton"
+        android:layout_width="105dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="70dp"
+        android:background="@drawable/button_abgerundete_ecken"
+        android:text="Netzwerk Speichern"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Login-LinkEinfügen"
+        app:layout_constraintTop_toBottomOf="@+id/ÜberschriftNeuesNetzwerk" />
+
+    <TextView
+        android:id="@+id/HilfeÜberschrift"
+        android:layout_width="135dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="349dp"
+        android:text="Hilfe"
+        android:textColor="#C1000000"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/HilfeErklärung"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.228"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Login-LinkInfo" />
+
+    <TextView
+        android:id="@+id/HilfeErklärung"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="32dp"
+        android:text="Bei Problemen, Fragen oder Feedback melden sie sich gerne per E-Mail an: "
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/AchtungText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HilfeÜberschrift" />
+
+    <TextView
+        android:id="@+id/E-Mail"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="253dp"
+        android:layout_marginBottom="12dp"
+        android:autoLink="email"
+        android:clickable="true"
+        android:contextClickable="true"
+        android:text="mika@calysoft.net"
+        android:textColor="#0445F0"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/AchtungImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HilfeErklärung" />
+
+    <TextView
+        android:id="@+id/GespeicherteNetzwerkeÜberschrift"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="125dp"
+        android:text="Gespeicherte Netzwerke"
+        android:textColor="#C1000000"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <EditText
+        android:id="@+id/Login-LinkName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="190dp"
+        android:ems="10"
+        android:hint="Name des Netzwerkes"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ÜberschriftNeuesNetzwerk" />
+
+    <TextView
+        android:id="@+id/Login_LinkNameInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="126dp"
+        android:text="Hier den Namen, des Netzwerkes eingeben. z.B. Standort-Name "
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Login-LinkName" />
+
+    <TextView
+        android:id="@+id/GespeicherteNetzwerkeAktuell"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="244dp"
+        android:text="Aktuelles Netzwerk:"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GespeicherteNetzwerkeÜberschrift" />
+
+    <ImageView
+        android:id="@+id/AchtungImage"
+        android:layout_width="54dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:background="#FF0000"
+        app:layout_constraintEnd_toStartOf="@+id/AchtungText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HilfeErklärung"
+        app:srcCompat="@android:drawable/stat_notify_error" />
+
+    <TextView
+        android:id="@+id/AchtungText"
+        android:layout_width="117dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="220dp"
+        android:text="INFO:"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/AchtungImage"
+        app:layout_constraintTop_toBottomOf="@+id/HilfeErklärung" />
+
+    <TextView
+        android:id="@+id/Achtung_Text"
+        android:layout_width="310dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="45dp"
+        android:text="Einige Funktionen auf dieser Seite sind noch nicht gegeben. Sie werden aber demnächst mit einem Update hinzugefügt."
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/Version"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AchtungText" />
+
+    <TextView
+        android:id="@+id/GespecihertesNetzwerkAuswählen"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="184dp"
+        android:text="neues Netzwerk Auswählen"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GespeicherteNetzwerkeAktuell" />
+
+    <TextView
+        android:id="@+id/Version"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="327dp"
+        android:layout_marginBottom="24dp"
+        android:text="Version: 2.5.2"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Achtung_Text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
